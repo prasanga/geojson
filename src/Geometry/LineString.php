@@ -20,6 +20,13 @@ class LineString extends Geometry
                 if ($position instanceof Position) {
                     $position = $position->toArray();
                 }
+
+                if (!is_array($position)) {
+                    throw new InvalidArgumentException(
+                        sprintf("Invalid position argument supplied: %s", var_export($position, true))
+                    );
+                }
+                
                 if (count($position) < 2) {
                     throw new InvalidArgumentException(
                         sprintf(
