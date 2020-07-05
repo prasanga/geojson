@@ -2,6 +2,5 @@
 <ruleset name="geojson-php">
     <description>The coding standard for geojson-php project.</description>
     <file>./src/Geometry</file>
-    <file>./tests/Geometry</file>
     <rule ref="PSR12" />
 </ruleset>
